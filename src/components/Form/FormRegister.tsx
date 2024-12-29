@@ -143,7 +143,7 @@ const FormRegister: FC<FormRegisterProps> = ({
                     )}
                 />
                 <div
-                    className='overflow-hidden transition-height'
+                    className='overflow-hidden transition-height -my-1.5'
                     style={{
                         height: !!errors.password?.message ? `${(passwordMsgRef.current?.offsetHeight || 0)}px` : "0"
                     }}
@@ -185,7 +185,7 @@ const FormRegister: FC<FormRegisterProps> = ({
                     className='bg-rose-600 text-gray-50 text-md font-bold h-12'
                     isLoading={isLoading}
                 >
-                    {!isLoading &&btnMsg("Continue")}
+                    {!isLoading && btnMsg("Continue")}
                 </Button>
 
             </form>
