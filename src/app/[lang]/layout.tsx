@@ -56,7 +56,8 @@ export default async function RootLayout({
           top: "0px",
         }}
       >
-        <ProgressBar />
+        test
+        {/* <ProgressBar />
         <Provider
           attribute="class"
           defaultTheme="system"
@@ -71,7 +72,7 @@ export default async function RootLayout({
           {children}
           {modal}
           <Toaster richColors closeButton position="bottom-center" />
-        </Provider>
+        </Provider> */}
       </body>
     </html>
   )
