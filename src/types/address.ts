@@ -1,0 +1,15 @@
+export interface Address {
+    id: string,
+    postal_code: string,
+    extras: string,
+    street: string,
+    district: string,
+    province: string,
+    city: string,
+    country: string,
+    country_code: string,
+    lat: number,
+    lng: number,
+    created_at: string,
+    updated_at: string,
+}

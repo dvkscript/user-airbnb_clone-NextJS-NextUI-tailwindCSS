@@ -1,0 +1,206 @@
+{
+  "home": {
+    "title": "Chào mừng {{name}} quay trở lại",
+    "items": {
+      "start a new listing": "Bắt đầu tạo mục cho thuê mới",
+      "finish your listing": "Hoàn thiện mục cho thuê của bạn",
+      "create a new listing": "Tạo mục cho thuê mới",
+      "create form an existing listing": "Tạo từ một mục cho thuê hiện có",
+      "your house listing started date": "Nhà/phòng cho thuê thuộc loại hình Nhà của bạn đã được tạo vào {{date}}"
+    },
+    "messages": {
+      "delete": {
+        "title": "Xóa?",
+        "description": "Bạn có chắc chắn muốn xóa nhà/phòng hiện tại không?"
+      }
+    }
+  },
+  "overview": {
+    "title": "Bắt đầu trên Airbnb thật dễ dàng",
+    "items": {
+      "1": {
+        "title": "Chia sẻ thông tin về chỗ ở của bạn cho chúng tôi",
+        "description": "Chia sẻ một số thông tin cơ bản, như vị trí của nhà/phòng cho thuê và số lượng khách có thể ở tại đó."
+      },
+      "2": {
+        "title": "Làm cho nhà/phòng cho thuê trở nên nổi bật",
+        "description": "Thêm từ 5 ảnh trở lên cùng với tiêu đề và nội dung mô tả – chúng tôi sẽ giúp bạn thực hiện."
+      },
+      "3": {
+        "title": "Hoàn thiện và đăng mục cho thuê",
+        "description": "Chọn giá khởi điểm, xác minh một vài thông tin, sau đó đăng mục cho thuê của bạn."
+      }
+    }
+  },
+  "about-your-place": {
+    "title": "Chia sẻ thông tin về chỗ ở của bạn cho chúng tôi",
+    "subtitle": "Bước 1",
+    "description": "Trong bước này, chúng tôi sẽ hỏi xem bạn cho thuê loại chỗ ở nào và bạn muốn cho khách đặt toàn bộ nhà hay chỉ một phòng cụ thể. Sau đó, hãy cho chúng tôi biết vị trí và số lượng khách có thể ở tại đó."
+  },
+  "structure": {
+    "title": "Điều nào sau đây mô tả chính xác nhất về chỗ ở của bạn?"
+  },
+  "privacy-type": {
+    "title": "Khách sẽ được sử dụng loại chỗ ở nào?",
+    "items": {
+      "ENTIRE": {
+        "title": "Toàn bộ nhà",
+        "description": "Khách được sử dụng riêng toàn bộ chỗ ở này."
+      },
+      "ROOM": {
+        "title": "Một căn phòng",
+        "description": "Khách sẽ có phòng riêng trong một ngôi nhà và được sử dụng những khu vực chung."
+      },
+      "SHARED": {
+        "title": "Phòng chung",
+        "description": "Khách ngủ trong một phòng hoặc khu vực chung – nơi bạn hoặc người khác có thể cùng sử dụng."
+      }
+    }
+  },
+  "location": {
+    "title": {
+      "search": "Chỗ ở của bạn nằm ở đâu?",
+      "form": "Xác nhận địa chỉ của bạn",
+      "map": "Ghim đã ở đúng chỗ chưa?"
+    },
+    "description": "Địa chỉ của bạn chỉ được chia sẻ với khách sau khi họ đặt phòng thành công.",
+    "items": {
+      "enter your address": "Nhập địa chỉ của bạn"
+    },
+    "form": {
+      "country": "Quốc gia/khu vực",
+      "province": "Đô thị/tỉnh",
+      "district": "Thành phố/quận/thị xã",
+      "street": "Địa chỉ đường/phố",
+      "extras": "Căn hộ, tầng, tòa nhà (nếu có)"
+    },
+    "map": {
+      "title": "Hiển thị vị trí chính xác của bạn",
+      "description": "Chỉ rõ cho khách vị trí chỗ ở của bạn. Chúng tôi sẽ chỉ chia sẻ địa chỉ của bạn sau khi khách đặt phòng thành công.",
+      "link": "Tìm hiểu thêm",
+      "tooltip": {
+        "active": "Nhấp đúp chuột vào đây để làm cho điểm đánh dấu có thể kéo được",
+        "inactive": "Điểm đánh dấu có thể kéo được"
+      }
+    }
+  },
+  "floor-plan": {
+    "title": "Chia sẻ một số thông tin cơ bản về chỗ ở của bạn",
+    "description": "Sau này, bạn sẽ bổ sung những thông tin khác, như loại giường chẳng hạn.",
+    "items": {
+      "guests": "Khách",
+      "bedrooms": "Phòng ngủ",
+      "beds": "Giường",
+      "bathrooms": "Phòng tắm"
+    }
+  },
+  "stand-out": {
+    "title": "Làm cho chỗ ở của bạn trở nên nổi bật",
+    "subtitle": "Bước 2",
+    "description": "Ở bước này, bạn sẽ thêm một số tiện nghi được cung cấp tại chỗ ở của bạn, cùng với 5 bức ảnh trở lên. Sau đó, bạn sẽ soạn tiêu đề và nội dung mô tả."
+  },
+  "amenities": {
+    "title": "Cho khách biết chỗ ở của bạn có những gì",
+    "description": "Bạn có thể thêm tiện nghi sau khi đăng mục cho thuê.",
+    "subtitle1": "Còn những tiện nghi yêu thích của khách sau đây thì sao?",
+    "subtitle2": "Bạn có tiện nghi nào nổi bật không?",
+    "subtitle3": "Bạn có tiện nghi nào trong số những tiện nghi đảm bảo an toàn sau đây không?"
+  },
+  "photos": {
+    "title": "Bổ sung một số bức ảnh chụp chỗ ở thuộc danh mục nhà của bạn",
+    "title2": "Chọn ít nhất 5 bức ảnh",
+    "title3": "Hoàn tất! Bạn thấy thế nào?",
+    "description": "Bạn sẽ cần 5 bức ảnh để bắt đầu. Về sau, bạn vẫn có thể đăng thêm hoặc thay đổi ảnh.",
+    "description2": "Kéo để sắp xếp lại",
+    "buttons": {
+      "edit": "Sửa",
+      "move_forward": "Di chuyển về phía trước",
+      "move_backward": "Di chuyển về phía sau",
+      "delete": "Xóa",
+      "make_cover_photo": "Đặt làm ảnh bìa",
+      "add_photo": "Thêm ảnh"
+    }
+  },
+  "title": {
+    "title": "Bây giờ, hãy đặt tiêu đề cho chỗ ở thuộc danh mục nhà của bạn",
+    "description": "Tiêu đề ngắn cho hiệu quả tốt nhất. Đừng lo lắng, bạn luôn có thể thay đổi tiêu đề sau."
+  },
+  "description": {
+    "title": "Tạo phần mô tả",
+    "description": "Chia sẻ những điều tạo nên nét đặc biệt cho chỗ ở của bạn.",
+    "valueDefault": "Bạn sẽ có một khoảng thời gian tuyệt vời tại nơi ở thoải mái này."
+  },
+  "finish-setup": {
+    "title": "Hoàn thiện và đăng",
+    "subtitle": "Bước 3",
+    "description": "Cuối cùng, bạn sẽ chọn cài đặt đặt phòng, thiết lập giá và đăng mục cho thuê."
+  },
+  "instant-book": {
+    "title": "Quyết định cách thức xác nhận đặt phòng",
+    "buttons": {
+      "true": {
+        "title": "Sử dụng tính năng Đặt ngay",
+        "description": "Khách có thể đặt phòng tự động."
+      },
+      "false": {
+        "title": "Chấp thuận hoặc từ chối yêu cầu",
+        "description": "Khách phải hỏi xem họ có thể đặt phòng không."
+      }
+    }
+  },
+  "price": {
+    "title": "Bây giờ, hãy đặt mức giá mà bạn muốn",
+    "description": "Bạn có thể thay đổi giá này bất cứ lúc nào.",
+    "form": {
+      "origin_price": "Giá cơ sở",
+      "guests_service_fee": "Phí dịch vụ dành cho khách",
+      "guest_price_before_taxes": "Giá cho khách (trước thuế)",
+      "you_earn": "Bạn nhận được"
+    }
+  },
+  "discount": {
+    "title": "Thêm ưu đãi giảm giá",
+    "description": "Giúp chỗ ở của bạn trở nên nổi bật để nhanh chóng được đặt phòng và thu hút những bài đánh giá đầu tiên.",
+    "form": {
+      "new_user": {
+        "title": "Khuyến mãi cho nhà/phòng cho thuê mới",
+        "description": "Giảm giá 20% cho 3 lượt đặt phòng đầu tiên của bạn"
+      },
+      "seven_nights": {
+        "title": "Giảm giá theo tuần",
+        "description": "Dành cho thời gian ở từ 7 đêm trở lên"
+      },
+      "one_month": {
+        "title": "Giảm giá theo tháng",
+        "description": "Dành cho thời gian ở từ 28 đêm trở lên"
+      }
+    }
+  },
+  "receipt": {
+    "title": "Xem lại mục cho thuê của bạn",
+    "description": "Dưới đây là những thông tin mà chúng tôi sẽ hiển thị cho khách. Hãy đảm bảo mọi thứ đều ổn thỏa.",
+    "form": {
+      "title": "Tiếp theo là gì?",
+      "confirm": {
+        "title": "Xác nhận một vài thông tin rồi đăng cho thuê",
+        "description": "Chúng tôi sẽ báo cho bạn biết nếu bạn cần xác minh danh tính hoặc đăng ký với chính quyền địa phương."
+      },
+      "calendar": {
+        "title": "Thiết lập lịch",
+        "description": "Chọn ngày mục cho thuê có thể đón khách. Mục cho thuê sẽ hiển thị sau 24 giờ kể từ khi bạn đăng."
+      },
+      "settings": {
+        "title": "Điều chỉnh cài đặt của bạn",
+        "description": "Đặt ra nội quy nhà, chọn chính sách hủy, chọn cách thức đặt phòng của khách, v.v."
+      }
+    }
+  },
+  "buttons": {
+    "next": "Tiếp theo",
+    "back": "Quay lại",
+    "get started": "Bắt đầu",
+    "exit": "Thoát",
+    "questions": "Bạn có thắc mắc?",
+    "save & exit": "Lưu & thoát"
+  }
+}

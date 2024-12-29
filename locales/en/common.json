@@ -1,0 +1,193 @@
+{
+    "header": {
+        "search": {
+            "anywhere": "Anywhere",
+            "add guests": "Add guests",
+            "any week": "Any week",
+            "stays": "Stays",
+            "experiences": "Experiences",
+            "online Experiences": "Online Experiences",
+            "where": "Where",
+            "check in": "Check in",
+            "check out": "Check out",
+            "who": "Guests",
+            "search destinations": "Search destinations",
+            "add dates": "Add dates",
+            "where_to": "Where to?"
+        },
+        "user-menu": {
+            "login": "Login",
+            "register": "Register",
+            "gift cards": "Gift cards",
+            "help center": "Help center",
+            "messages": "Messages",
+            "trips": "Trips",
+            "wish lists": "Wish Lists",
+            "log out": "Log out"
+        },
+        "navbar": {
+            "Today": "Today",
+            "Calendar": "Calendar",
+            "Listings": "Listings",
+            "Messages": "Messages",
+            "Menu": "Menu"
+        }
+    },
+    "modal": {
+        "languages": {
+            "language and region": "Language and region",
+            "choose a language and region": "Choose a language and region",
+            "suggested languages and regions": "Suggested languages and regions"
+        },
+        "upload photos": {
+            "title": "Upload photos",
+            "description_no_selected": "No items selected",
+            "description_selected": "{{value}} items selected",
+            "content1": "Drag and drop",
+            "content2": "or browse for photos",
+            "buttons": {
+                "done": "Done",
+                "browser": "Browser",
+                "upload": "Upload"
+            }
+        },
+        "wishlists": {
+            "title": {
+                "create": "Create wishlist",
+                "save": "Save to wishlist"
+            },
+            "form": {
+                "name": {
+                    "label": "Name",
+                    "message": "{{value}} characters"
+                }
+            },
+            "table": {
+                "message": "{{value}} saved"
+            },
+            "toast": {
+                "save": "Saved to {{value}}",
+                "remove": "Removed from {{value}}"
+            }
+        }
+    },
+    "buttons": {
+        "Create": "Create",
+        "Delete": "Delete",
+        "Clear": "Clear",
+        "Create new wishlist": "Create new wishlist",
+        "Cancel": "Cancel",
+        "Ok": "Ok",
+        "Get started": "Get started",
+        "Save": "Save",
+        "Share": "Share",
+        "Close": "Close",
+        "Change": "Change",
+        "Clear dates": "Clear dates",
+        "Check availability": "Check availability",
+        "Reserve": "Reserve",
+        "Message Host": "Message Host",
+        "Edit": "Edit",
+        "Request to book": "Request to book",
+        "Continue": "Continue"
+    },
+    "status": {
+        "active": "Active",
+        "in_progress": "In progress",
+        "action_required": "Action required"
+    },
+    "mobile": {
+        "navbar": {
+            "Explore": "Explore",
+            "Wishlists": "Wishlists",
+            "Trips": "Trips",
+            "Messages": "Messages",
+            "Profile": "Profile",
+            "Today": "Today",
+            "Calendar": "Calendar",
+            "Listings": "Listings",
+            "Menu": "Menu"
+        }
+    },
+    "units": {
+        "items": {
+            "night": "night",
+            "guest": "guest",
+            "pets": "pets",
+            "infants": "infants",
+            "dates": "dates",
+            "guests": "guests"
+        }
+    },
+    "forms": {
+        "checkIn": {
+            "label": "Check-In",
+            "placeholder": "Add dates",
+            "validate": "This date is unavailable"
+        },
+        "checkout": {
+            "label": "Checkout",
+            "placeholder": "Add dates",
+            "validate": "This date is unavailable"
+        },
+        "guests": {
+            "label": "Guests",
+            "options": {
+                "adults": {
+                    "label": "Adults",
+                    "description": "Age 13+"
+                },
+                "children": {
+                    "label": "Children",
+                    "description": "Ages 2–12"
+                },
+                "infants": {
+                    "label": "Infants",
+                    "description": "Under 2"
+                },
+                "pets": {
+                    "label": "Pets",
+                    "description": "Bringing a service animal?"
+                }
+            }
+        },
+        "name": {
+            "label": "Name",
+            "placeholder": "Name"
+        },
+        "password": {
+            "label": "Password",
+            "placeholder": "Password",
+            "massages": {
+                "length": "Password must contain at least 8 characters",
+                "number": "Password must have at least one number",
+                "lowercase": "Password must contain at least one lowercase letter",
+                "uppercase": "Password must contain at least one uppercase letter",
+                "symbol": "Password must contain at least one special character"
+            }
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "Email"
+        },
+        "re-password": {
+            "label": "Re-Password",
+            "placeholder": "Re-Password"
+        },
+        "full_name": {
+            "label": "Full name",
+            "placeholder": "Full name"
+        }
+    },
+    "fees": {
+        "serviceFee": "Airbnb service fee",
+        "cleaningFee": "Cleaning fee"
+    },
+    "offers": {
+        "SpecialOffer": "Special offer"
+    },
+    "prices": {
+        "totalBeforeTaxes": "Total before taxes",
+        "total": "Tổng"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Ôi, có lỗi xảy ra!",
+    "description": "Đã xảy ra lỗi không mong muốn, vui lòng thử lại sau ít phút!",
+    "buttons": {
+        "back": "Quay lại trang chủ",
+        "close": "Đóng",
+        "try_again": "Thử lại",
+        "go_back": "Quay lại"
+    }
+}

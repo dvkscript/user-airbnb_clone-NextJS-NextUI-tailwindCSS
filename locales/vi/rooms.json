@@ -1,0 +1,65 @@
+{
+    "navbar": {
+        "items": {
+            "Photos": "Ảnh",
+            "Amenities": "Tiện nghi",
+            "Reviews": "Đánh Giá",
+            "Location": "Vị trí"
+        }
+    },
+    "floor-plan": {
+        "guests": "khách",
+        "bedroom": "phòng ngủ",
+        "bed": "giường",
+        "bath": "phòng tắm"
+    },
+    "subtitles": {
+        "ENTIRE": "Toàn bộ nhà tại {{value}}",
+        "ROOMS": "Toàn bộ phòng tại {{value}}",
+        "SHARED": "Toàn bộ phòng chung tại {{value}}"
+    },
+    "user": {
+        "experienced": {
+            "hour": "{{value}} giờ kinh nghiệm đón tiếp khách",
+            "day": "{{value}} ngày kinh nghiệm đón tiếp khách",
+            "month": "{{value}} tháng kinh nghiệm đón tiếp khách",
+            "year": "{{value}} năm kinh nghiệm đón tiếp khách",
+            "started": "Bắt đầu đón tiếp khách từ năm {{value}}"
+        },
+        "subName": "Chủ nhà/Người tổ chức:",
+        "title": "Gặp gỡ Chủ nhà",
+        "subtitle": "Thông tin Chủ nhà"
+    },
+    "amenities": {
+        "title": "Nơi này có những gì cho bạn",
+        "FAVORITE": "Yêu thích",
+        "STANDOUT": "Nổi bật",
+        "SAFETY": "An toàn"
+    },
+    "booking": {
+        "titles": {
+            "staySummary": "{{day}} đêm tại {{address}}",
+            "add": "Thêm ngày để xem giá",
+            "select": "Chọn ngày"
+        },
+        "description": "Thêm ngày đi để biết giá chính xác",
+        "form": {
+            "messages": {
+                "validate": "Ngày này không còn trống",
+                "alert": "Bạn vẫn chưa bị trừ tiền",
+                "maxGuest": "Chỗ ở này cho phép tối đa {{guest}} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết."
+            }
+        }
+    },
+    "location": {
+        "title": "Nơi bạn sẽ đến"
+    },
+    "policies": {
+        "title": "Những điều cần biết",
+        "subtitles": {
+            "houseRules": "Nội quy nhà",
+            "safetyAndProperty": "An toàn và chỗ ở",
+            "cancellationPolicy": "Chính sách hủy"
+        }
+    }
+}

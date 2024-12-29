@@ -1,0 +1,95 @@
+{
+    "listings": {
+        "title": "Nhà/phòng cho thuê của bạn",
+        "room-title": "Nhà/phòng cho thuê thuộc loại hình Nhà của bạn",
+        "table": {
+            "thead": {
+                "listing": "Mục cho thuê",
+                "location": "Vị trí",
+                "status": "Trạng thái"
+            }
+        },
+        "no-data": {
+            "title": "Bạn chưa có mục cho thuê nào",
+            "description": "Tạo mục cho thuê với Airbnb Setup để bắt đầu nhận yêu cầu đặt phòng.",
+            "button": "Bắt đầu"
+        },
+        "modal": {
+            "title": {
+                "delete": "Xóa mục cho thuê này?"
+            },
+            "description": {
+                "delete": "Đây là quyết định vô thời hạn – bạn sẽ không thể tìm thấy hay chỉnh sửa mục cho thuê này nữa."
+            },
+            "buttons": {
+                "edit": "Chỉnh sửa mục cho thuê",
+                "remove": "Xóa mục cho thuê",
+                "yes": "Có, hãy xóa",
+                "cancel": "Huỷ"
+            }
+        },
+        "editor": {
+            "aside": {
+                "title": "Trình chỉnh sửa mục cho thuê",
+                "items": {
+                    "Photo tour": "Tour tham quan qua ảnh",
+                    "Photos": "ảnh",
+                    "Title": "Tiêu đề",
+                    "Property type": "Loại chỗ ở",
+                    "Pricing": "Định giá",
+                    "Availability": "Tình trạng còn phòng",
+                    "Number of guests": "Số lượng khách",
+                    "Description": "Mô tả",
+                    "Amenities": "Tiện nghi",
+                    "Accessibility features": "Đặc điểm phù hợp với người có nhu cầu đặc biệt",
+                    "Location": "Vị trí",
+                    "About the Host": "Giới thiệu về Chủ nhà",
+                    "Co-hosts": "Đồng chủ nhà",
+                    "Instant Book": "Đặt ngay",
+                    "House rules": "Nội quy nhà",
+                    "Guest safety": "An toàn cho khách",
+                    "Cancellation policy": "Chính sách hủy",
+                    "Custom link": "Liên kết tùy chỉnh",
+                    "Guests": "Khách",
+                    "Bedrooms": "Phòng ngủ",
+                    "Beds": "Giường",
+                    "Bathrooms": "Phòng tắm",
+                    "{{value}}% weekly discount": "Giảm giá theo tuần: {{value}}%",
+                    "{{value}}% monthly discount": "Giảm giá theo tháng: {{value}}%",
+                    "{{value}}% new user discount": "Giảm giá cho người mới: {{value}}%",
+                    "{{value}} per night": "{{value}}/đêm"
+                }
+            },
+            "photo-tour": {
+                "title": "Tour tham quan qua ảnh",
+                "description": "Quản lý ảnh và bổ sung thông tin. Khách sẽ chỉ thấy tour tham quan của bạn nếu mỗi phòng đều đã có ảnh.",
+                "buttons": {
+                    "Save": "Lưu",
+                    "edit": "Sửa",
+                    "move_forward": "Di chuyển về phía trước",
+                    "move_backward": "Di chuyển về phía sau",
+                    "delete": "Xóa",
+                    "make_cover_photo": "Đặt làm ảnh bìa",
+                    "add_photo": "Thêm ảnh"
+                },
+                "messages": {
+                    "deleteValidate": "Bạn cần có tối thiểu 5 ảnh để xóa. Hãy thêm ảnh mới để tiếp tục."
+                }
+            },
+            "title": {
+                "validate": "Còn lại {{value}} ký tự",
+                "buttons": {
+                    "Save": "Lưu"
+                }
+            },
+            "pricing": {
+                "title": "Pricing",
+                "description": "These settings apply to all nights, unless you customize them by date.",
+                "subtitle": {
+                    "nightly_price": "Nightly price",
+                    "discounts": "Discounts"
+                }
+            }
+        }
+    }
+}

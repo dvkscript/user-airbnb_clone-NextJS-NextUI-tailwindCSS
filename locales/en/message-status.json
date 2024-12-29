@@ -1,0 +1,50 @@
+{
+    "200": {
+        "title": "Success",
+        "description": "The request has succeeded."
+    },
+    "201": {
+        "title": "Created",
+        "description": "The request has succeeded and a new resource has been created."
+    },
+    "204": {
+        "title": "No Content",
+        "description": "The server successfully processed the request, but is not returning any content."
+    },
+    "400": {
+        "title": "Bad Request",
+        "description": "The server could not understand the request due to invalid syntax."
+    },
+    "401": {
+        "title": "Unauthorized",
+        "description": "The request requires user authentication."
+    },
+    "403": {
+        "title": "Forbidden",
+        "description": "The server understood the request, but refuses to authorize it."
+    },
+    "404": {
+        "title": "Not Found",
+        "description": "The requested resource could not be found."
+    },
+    "405": {
+        "title": "Method Not Allowed",
+        "description": "The method specified in the request is not allowed for the resource."
+    },
+    "409": {
+        "title": "Conflict",
+        "description": "The request could not be completed due to a conflict with the current state of the resource."
+    },
+    "500": {
+        "title": "Internal Server Error.",
+        "description": "An unexpected error occurred on the server."
+    },
+    "502": {
+        "title": "Bad Gateway",
+        "description": "The server was acting as a gateway or proxy and received an invalid response from the upstream server."
+    },
+    "503": {
+        "title": "Service Unavailable",
+        "description": "The server is currently unable to handle the request due to temporary overloading or maintenance."
+    }
+}

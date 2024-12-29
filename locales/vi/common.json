@@ -1,0 +1,193 @@
+{
+    "header": {
+        "search": {
+            "stays": "Chỗ ở",
+            "experiences": "Trải nghiệm",
+            "where": "Địa điểm",
+            "search destinations": "Tìm kiếm địa điểm",
+            "check in": "Nhận phòng",
+            "add dates": "Thêm ngày",
+            "check out": "Trả phòng",
+            "who": "Khách",
+            "add guests": "Thêm Khách",
+            "any week": "Tuần bất kỳ",
+            "online Experiences": "Trải nghiệm trực tuyến",
+            "anywhere": "Địa điểm bất kỳ",
+            "where_to": "Where to?"
+        },
+        "user-menu": {
+            "login": "Đăng nhập",
+            "register": "Đăng Ký",
+            "gift cards": "Thẻ quà tặng",
+            "help center": "Trung tâm trợ giúp",
+            "messages": "Tin nhắn",
+            "trips": "Chuyến đi",
+            "wish lists": "Danh sách yêu thích",
+            "log out": "Đăng xuất"
+        },
+        "navbar": {
+            "Today": "Hôm nay",
+            "Calendar": "Lịch",
+            "Listings": "Nhà/phòng cho thuê",
+            "Messages": "Tin nhắn",
+            "Menu": "Menu"
+        }
+    },
+    "modal": {
+        "languages": {
+            "language and region": "Ngôn ngữ và khu vực",
+            "choose a language and region": "Chọn ngôn ngữ và khu vực",
+            "suggested languages and regions": "Ngôn ngữ và khu vực được đề xuất"
+        },
+        "upload photos": {
+            "title": "Tải ảnh lên",
+            "description_no_selected": "Chưa có mục nào được chọn",
+            "description_selected": "Đã chọn {{value}} mục",
+            "content1": "Kéo và thả",
+            "content2": "hoặc duyệt tìm ảnh",
+            "buttons": {
+                "done": "Hoàn tất",
+                "browser": "Duyệt tìm",
+                "upload": "Tải lên"
+            }
+        },
+        "wishlists": {
+            "title": {
+                "create": "Tạo Danh sách yêu thích",
+                "save": "Lưu vào danh sách yêu thích"
+            },
+            "form": {
+                "name": {
+                    "label": "Tên",
+                    "message": "{{value}} ký tự"
+                }
+            },
+            "table": {
+                "message": "Đã lưu {{value}} mục"
+            },
+            "toast": {
+                "save": "Đã lưu vào {{value}}",
+                "remove": "Đã xóa khỏi {{value}}"
+            }
+        }
+    },
+    "buttons": {
+        "Create": "Tạo",
+        "Delete": "Xóa",
+        "Clear": "Xóa",
+        "Create new wishlist": "Tạo danh sách mong muốn mới",
+        "Cancel": "Huỷ",
+        "Ok": "Đồng ý",
+        "Get started": "Bắt đầu",
+        "Save": "Lưu",
+        "Share": "Chia sẻ",
+        "Close": "Đóng",
+        "Change": "Thay đổi",
+        "Clear dates": "Xóa ngày",
+        "Check availability": "Kiểm tra tình trạng còn phòng",
+        "Reserve": "Đặt phòng",
+        "Message Host": "Nhắn tin cho Chủ nhà",
+        "Edit": "Sửa",
+        "Request to book": "Yêu cầu đặt phòng",
+        "Continue": "Tiếp tục"
+    },
+    "status": {
+        "active": "Hành động",
+        "in_progress": "Đang thực hiện",
+        "action_required": "Yêu cầu hành động"
+    },
+    "mobile": {
+        "navbar": {
+            "Explore": "Khám phá",
+            "Wishlists": "Yêu thích",
+            "Trips": "Chuyến đi",
+            "Messages": "Tin nhắn",
+            "Profile": "Hồ sơ",
+            "Today": "Hôm nay",
+            "Calendar": "Lịch",
+            "Listings": "Nhà/phòng cho thuê",
+            "Menu": "Menu"
+        }
+    },
+    "units": {
+        "items": {
+            "night": "đêm",
+            "guest": "khách",
+            "pets": "thú cưng",
+            "infants": "em bé",
+            "dates": "ngày",
+            "guests": "khách"
+        }
+    },
+    "forms": {
+        "checkIn": {
+            "label": "Nhận phòng",
+            "placeholder": "Thêm ngày",
+            "validate": "Ngày này không còn trống"
+        },
+        "checkout": {
+            "label": "Trả phòng",
+            "placeholder": "Thêm ngày",
+            "validate": "Ngày này không còn trống"
+        },
+        "guests": {
+            "label": "Khách",
+            "options": {
+                "adults": {
+                    "label": "Người lớn",
+                    "description": "Từ 13 tuổi trở lên"
+                },
+                "children": {
+                    "label": "Trẻ em",
+                    "description": "Độ tuổi 2 – 12"
+                },
+                "infants": {
+                    "label": "Em bé",
+                    "description": "Dưới 2 tuổi"
+                },
+                "pets": {
+                    "label": "Thú cưng",
+                    "description": "Bạn sẽ mang theo động vật phục vụ?"
+                }
+            }
+        },
+        "name": {
+            "label": "Tên",
+            "placeholder": "Tên"
+        },
+        "password": {
+            "label": "Mật khẩu",
+            "placeholder": "Mật khẩu",
+            "massages": {
+                "length": "Mật khẩu phải chứa ít nhất 8 ký tự",
+                "number": "Mật khẩu phải chứa ít nhất một chữ số",
+                "lowercase": "Mật khẩu phải chứa ít nhất một chữ cái viết thường",
+                "uppercase": "Mật khẩu phải chứa ít nhất một chữ cái viết hoa",
+                "symbol": "Mật khẩu phải chứa ít nhất một ký tự đặc biệt"
+            }
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "Email"
+        },
+        "re-password": {
+            "label": "Nhập lại mật khẩu",
+            "placeholder": "Nhập lại mật khẩu"
+        },
+        "full_name": {
+            "label": "Họ và tên",
+            "placeholder": "Họ và tên"
+        }
+    },
+    "fees": {
+        "serviceFee": "Phí dịch vụ Airbnb",
+        "cleaningFee": "Phí vệ sinh"
+    },
+    "offers": {
+        "SpecialOffer": "Ưu đãi đặc biệt"
+    },
+    "prices": {
+        "totalBeforeTaxes": "Tổng trước thuế",
+        "total": "Tổng"
+    }
+}

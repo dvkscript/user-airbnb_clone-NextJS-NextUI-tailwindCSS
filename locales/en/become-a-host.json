@@ -1,0 +1,206 @@
+{
+  "home": {
+    "title": "Welcome back, {{name}}",
+    "items": {
+      "start a new listing": "Start a new listing",
+      "finish your listing": "Finish your listing",
+      "create a new listing": "Create a new listing",
+      "create form an existing listing": "Create form an existing listing",
+      "your house listing started date": "Your House listing started {{date}}"
+    },
+    "messages": {
+      "delete": {
+        "title": "Delete?",
+        "description": "Are you sure you want to delete the current house/room?"
+      }
+    }
+  },
+  "overview": {
+    "title": "It’s easy to get started on Airbnb",
+    "items": {
+      "1": {
+        "title": "Tell us about your place",
+        "description": "Share some basic info, like where it is and how many guests can stay."
+      },
+      "2": {
+        "title": "Make it stand out",
+        "description": "Add 5 or more photos plus a title and description—we’ll help you out."
+      },
+      "3": {
+        "title": "Finish up and publish",
+        "description": "Choose a starting price, verify a few details, then publish your listing."
+      }
+    }
+  },
+  "about-your-place": {
+    "title": "Tell us about your place",
+    "subtitle": "Step 1",
+    "description": "In this step, we'll ask you which type of property you have and if guests will book the entire place or just a room. Then let us know the location and how many guests can stay."
+  },
+  "structure": {
+    "title": "Which of these best describes your place?"
+  },
+  "privacy-type": {
+    "title": "What type of place will guests have?",
+    "items": {
+      "ENTIRE": {
+        "title": "An entire place",
+        "description": "Guests have the whole place to themselves."
+      },
+      "ROOM": {
+        "title": "A room",
+        "description": "Guests have their own room in a home, plus access to shared spaces."
+      },
+      "SHARED": {
+        "title": "A shared room",
+        "description": "Guests sleep in a room or common area that may be shared with you or others."
+      }
+    }
+  },
+  "location": {
+    "title": {
+      "search": "Where's your place located?",
+      "form": "Confirm your address",
+      "map": "Is the pin in the right spot?"
+    },
+    "description": "Your address is only shared with guests after they’ve made a reservation.",
+    "items": {
+      "enter your address": "Enter your address"
+    },
+    "form": {
+      "country": "Country / region",
+      "province": "Municipality / province",
+      "district": "City / district / town",
+      "street": "Street address",
+      "extras": "Apt, floor, bldg (if applicable)"
+    },
+    "map": {
+      "title": "Show your specific location",
+      "description": "Make it clear to guests where your place is located. We'll only share your address after they've made a reservation.",
+      "link": "Learn more",
+      "tooltip": {
+        "active": "Double click here to make marker draggable",
+        "inactive": "Marker is draggable"
+      }
+    }
+  },
+  "floor-plan": {
+    "title": "Share some basics about your place",
+    "description": "You'll add more details later, like bed types.",
+    "items": {
+      "guests": "Guests",
+      "bedrooms": "Bedrooms",
+      "beds": "Beds",
+      "bathrooms": "Bathrooms"
+    }
+  },
+  "stand-out": {
+    "title": "Make your place stand out",
+    "subtitle": "Step 2",
+    "description": "In this step, you’ll add some of the amenities your place offers, plus 5 or more photos. Then, you’ll create a title and description."
+  },
+  "amenities": {
+    "title": "Tell guests what your place has to offer",
+    "description": "You can add more amenities after you publish your listing.",
+    "subtitle1": "What about these guest favorites?",
+    "subtitle2": "Do you have any standout amenities?",
+    "subtitle3": "Do you have any of these safety items?"
+  },
+  "photos": {
+    "title": "Add some photos of your house",
+    "title2": "Choose at least 5 photos",
+    "title3": "Ta-da! How does this look?",
+    "description": "You'll need 5 photos to get started. You can add more or make changes later.",
+    "description2": "Drag to reorder",
+    "buttons": {
+      "edit": "Edit",
+      "move_forward": "Move forward",
+      "move_backward": "Move backward",
+      "delete": "Delete",
+      "make_cover_photo": "Make cover photo",
+      "add_photo": "Add photo"
+    }
+  },
+  "title": {
+    "title": "Now, let's give your house a title",
+    "description": "Short titles work best. Have fun with it—you can always change it later."
+  },
+  "description": {
+    "title": "Create your description",
+    "description": "Share what makes your place special.",
+    "valueDefault": "You'll have a wonderful time at this comfortable accommodation."
+  },
+  "finish-setup": {
+    "title": "Finish up and publish",
+    "subtitle": "Step 3",
+    "description": "Finally, you'll choose booking settings, set up pricing, and publish your listing."
+  },
+  "instant-book": {
+    "title": "Decide how you’ll confirm reservations",
+    "buttons": {
+      "true": {
+        "title": "Use Instant Book",
+        "description": "Guests can book automatically."
+      },
+      "false": {
+        "title": "Approve or decline requests",
+        "description": "Guests must ask if they can book."
+      }
+    }
+  },
+  "price": {
+    "title": "Now, set your price",
+    "description": "You can change it anytime.",
+    "form": {
+      "origin_price": "Base price",
+      "guests_service_fee": "Guest service fee",
+      "guest_price_before_taxes": "Guest price before taxes",
+      "you_earn": "You earn"
+    }
+  },
+  "discount": {
+    "title": "Add discounts",
+    "description": "Help your place stand out to get booked faster and earn your first reviews.",
+    "form": {
+      "new_user": {
+        "title": "New listing promotion",
+        "description": "Offer 20% off your first 3 bookings"
+      },
+      "seven_nights": {
+        "title": "Weekly discount",
+        "description": "For stays of 7 nights or more"
+      },
+      "one_month": {
+        "title": "Monthly discount",
+        "description": "For stays of 28 nights or more"
+      }
+    }
+  },
+  "receipt": {
+    "title": "Review your listing",
+    "description": "Here's what we'll show to guests. Make sure everything looks good.",
+    "form": {
+      "title": "What's next?",
+      "confirm": {
+        "title": "Confirm a few details and publish",
+        "description": "We’ll let you know if you need to verify your identity or register with the local government."
+      },
+      "calendar": {
+        "title": "Set up your calendar",
+        "description": "Choose which dates your listing is available. It will be visible 24 hours after you publish."
+      },
+      "settings": {
+        "title": "Adjust your settings",
+        "description": "Set house rules, select a cancellation policy, choose how guests book, and more."
+      }
+    }
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "get started": "Get started",
+    "exit": "Exit",
+    "questions": "Questions?",
+    "save & exit": "Save & exit"
+  }
+}

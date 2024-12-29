@@ -1,0 +1,65 @@
+{
+    "navbar": {
+        "items": {
+            "Photos": "Photos",
+            "Amenities": "Amenities",
+            "Reviews": "Reviews",
+            "Location": "Location"
+        }
+    },
+    "floor-plan": {
+        "guests": "guests",
+        "bedroom": "bedroom",
+        "bed": "bed",
+        "bath": "bath"
+    },
+    "subtitles": {
+        "ENTIRE": "Entire house at {{value}}",
+        "ROOMS": "Entire room at {{value}}",
+        "SHARED": "Entire shared room at {{value}}"
+    },
+    "user": {
+        "experienced": {
+            "hour": "{{value}} hour hosting",
+            "day": "{{value}} day hosting",
+            "month": "{{value}} month hosting",
+            "year": "{{value}} year hosting",
+            "started": "Started hosting in {{value}}"
+        },
+        "subName": "Hosted by",
+        "title": "Meet your Host",
+        "subtitle": "Host details"
+    },
+    "amenities": {
+        "title": "What this place offers",
+        "FAVORITE": "Favorite",
+        "STANDOUT": "Standout",
+        "SAFETY": "Safety"
+    },
+    "booking": {
+        "titles": {
+            "staySummary": "{{day}} nights in {{address}}",
+            "add": "Add dates for prices",
+            "select": "Select dates"
+        },
+        "description": "Add your travel dates for exact pricing",
+        "form": {
+            "messages": {
+                "validate": "This date is unavailable",
+                "alert": "You won't be charged yet",
+                "maxGuest": "This place has a maximum of {{guest}} guests, not including infants. If you're bringing more than 2 pets, please let your host know."
+            }
+        }
+    },
+    "location": {
+        "title": "Where you’ll be"
+    },
+    "policies": {
+        "title": "Things to know",
+        "subtitles": {
+            "houseRules": "House rules",
+            "safetyAndProperty": "Safety & property",
+            "cancellationPolicy": "Cancellation policy"
+        }
+    }
+}

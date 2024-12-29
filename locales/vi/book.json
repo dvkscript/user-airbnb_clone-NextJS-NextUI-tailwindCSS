@@ -1,0 +1,53 @@
+{
+    "title": "Yêu cầu đặt phòng/đặt chỗ",
+    "price": {
+        "title": "Chi tiết giá"
+    },
+    "image": {
+        "subtitles": {
+            "ENTIRE": "Toàn bộ nhà",
+            "ROOMS": "Toàn bộ phòng",
+            "SHARED": "Toàn bộ phòng chung"
+        }
+    },
+    "trip": {
+        "title": "Chuyến đi của bạn",
+        "modal": {
+            "title": "Khách",
+            "description": "Chỗ ở này cho phép tối đa {{guest}} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết."
+        }
+    },
+    "pay": {
+        "title": "Thanh toán bằng"
+    },
+    "required": {
+        "title": "Bắt buộc cho chuyến đi của bạn",
+        "items": {
+            "messageTheHost": {
+                "title": "Nhắn tin cho Chủ nhà",
+                "description": "Trước khi bạn có thể tiếp tục thực hiện, hãy chia sẻ đôi chút với Vacayandco về chuyến đi của bạn và lý do chỗ ở của họ phù hợp với bạn."
+            },
+            "phoneNumber": {
+                "title": "Số điện thoại",
+                "description": "Thêm và xác nhận số điện thoại của bạn để nhận thông tin cập nhật về chuyến đi."
+            }
+        }
+    },
+    "policy": {
+        "title": "Chính sách hủy",
+        "items": {
+            "non-refundable": "Đặt phòng/đặt chỗ này không được hoàn tiền."
+        }
+    },
+    "rules": {
+        "title": "Quy chuẩn chung",
+        "subtitle": "Chúng tôi yêu cầu tất cả khách phải ghi nhớ một số quy chuẩn đơn giản để làm một vị khách tuyệt vời.",
+        "items": {
+            "0": "Tuân thủ nội quy nhà",
+            "1": "Giữ gìn ngôi nhà như thể đó là nhà bạn"
+        }
+    },
+    "auth": {
+        "title": "Đăng nhập hoặc đăng ký để đặt phòng/đặt chỗ"
+    }
+}

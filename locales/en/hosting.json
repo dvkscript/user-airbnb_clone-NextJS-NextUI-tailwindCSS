@@ -1,0 +1,95 @@
+{
+    "listings": {
+        "title": "Your listings",
+        "room-title": "Your House listing",
+        "table": {
+            "thead": {
+                "listing": "Listing",
+                "location": "Location",
+                "status": "Status"
+            }
+        },
+        "no-data": {
+            "title": "You don’t have any listings yet",
+            "description": "Create a listing with Airbnb Setup and start getting booked",
+            "button": "Get started"
+        },
+        "modal": {
+            "title": {
+                "delete": "Remove this listing?"
+            },
+            "description": {
+                "delete": "This is permanent—you’ll no longer be able to find or edit this listing."
+            },
+            "buttons": {
+                "edit": "Edit listing",
+                "remove": "Remove listing",
+                "yes": "Yes, remove",
+                "cancel": "Cancel"
+            }
+        },
+        "editor": {
+            "aside": {
+                "title": "Listing editor",
+                "items": {
+                    "Photo tour": "Photo tour",
+                    "Photos": "Photos",
+                    "Title": "Title",
+                    "Property type": "Property type",
+                    "Pricing": "Pricing",
+                    "Availability": "Availability",
+                    "Number of guests": "Number of guests",
+                    "Description": "Description",
+                    "Amenities": "Amenities",
+                    "Accessibility features": "Accessibility features",
+                    "Location": "Location",
+                    "About the Host": "About the Host",
+                    "Co-hosts": "Co-hosts",
+                    "Instant Book": "Instant Book",
+                    "House rules": "House rules",
+                    "Guest safety": "Guest safety",
+                    "Cancellation policy": "Cancellation policy",
+                    "Custom link": "Custom link",
+                    "Guests": "Guests",
+                    "Bedrooms": "Bedrooms",
+                    "Beds": "Beds",
+                    "Bathrooms": "Bathrooms",
+                    "{{value}}% weekly discount": "{{value}}% weekly discount",
+                    "{{value}}% monthly discount": "{{value}}% monthly discount",
+                    "{{value}}% new user discount": "{{value}}% new user discount",
+                    "{{value}} per night": "{{value}} per night"
+                }
+            },
+            "photo-tour": {
+                "title": "Photo tour",
+                "description": "Manage photos and add details. Guests will only see your tour if every room has a photo.",
+                "buttons": {
+                    "Save": "Save",
+                    "edit": "Edit",
+                    "move_forward": "Move forward",
+                    "move_backward": "Move backward",
+                    "delete": "Delete",
+                    "make_cover_photo": "Make cover photo",
+                    "add_photo": "Add photo"
+                },
+                "messages": {
+                    "deleteValidate": "You need at least 5 images to delete. Please add more images to proceed."
+                }
+            },
+            "title": {
+                "validate": "{{value}} characters available",
+                "buttons": {
+                    "Save": "Save"
+                }
+            },
+            "pricing": {
+                "title": "Pricing",
+                "description": "These settings apply to all nights, unless you customize them by date.",
+                "subtitle": {
+                    "nightly_price": "Nightly price",
+                    "discounts": "Discounts"
+                }
+            }
+        }
+    }
+}

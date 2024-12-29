@@ -1,0 +1,38 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @supports (font: -apple-system-body) and (-webkit-touch-callout: default) {
+    :root {
+      font: -apple-system-body;
+      scroll-padding: 0;
+    }
+  }
+
+  /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition:
+      background-color 600000s 0s,
+      color 600000s 0s;
+  }
+
+  /* https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#controlling_animations_with_javascript */
+  ::view-transition-image-pair(root) {
+    isolation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+    display: block;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}

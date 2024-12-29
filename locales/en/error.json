@@ -1,0 +1,10 @@
+{
+    "title": "Oops, something went wrong!",
+    "description": "An unexpected error occurred, please try again in a few minutes!",
+    "buttons": {
+        "back": "Back to Home",
+        "close": "Close",
+        "try_again": "Try again",
+        "go_back": "Go back"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "My proxy": {
+        "key": "A:/Code/SSL/localhost.key",
+        "cert": "A:/Code/SSL/localhost.crt",
+        "source": 8889,
+        "target": 8888,
+        "hostname": "localhost"
+    }
+}
