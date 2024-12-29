@@ -1,12 +1,12 @@
-import ProgressBar from "@/components/Common/ProgressBar";
-import Provider from "@/components/Provider";
+// import ProgressBar from "@/components/Common/ProgressBar";
+// import Provider from "@/components/Provider";
 import { Dictionary, getDictionary, getLocaleSystems, Locale } from "@/libs/dictionary.lib";
-import { Toaster } from "sonner";
+// import { Toaster } from "sonner";
 import "@/assets/styles/globals.css"
 import { cn } from "@/utils/dom.util";
 import { airbnbFont } from "@/fonts";
 import { Metadata } from "next";
-import { getHeaderValue } from "@/libs/next-headers";
+// import { getHeaderValue } from "@/libs/next-headers";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -31,22 +31,22 @@ export async function generateMetadata(
 }
 
 export default async function RootLayout({
-  children,
+  // children,
   params: {
     lang
   },
-  modal
+  // modal
 }: RootLayoutProps) {
   const [
-    dictionary,
-    localeSystems
+    // dictionary,
+    // localeSystems
   ] = await Promise.all([
     getDictionary(lang),
     getLocaleSystems()
   ]);
 
-  const profile = getHeaderValue("user");
-  const isAuthorization = getHeaderValue("isAuthorization");
+  // const profile = getHeaderValue("user");
+  // const isAuthorization = getHeaderValue("isAuthorization");
 
   return (
     <html lang={lang} suppressHydrationWarning className="h-full w-full">
