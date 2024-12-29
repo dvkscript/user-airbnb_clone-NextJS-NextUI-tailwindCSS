@@ -40,11 +40,6 @@ const HomeClient: React.FC<HomeClientProps> = ({
         const search = new URLSearchParams(searchParamsRef.current);
         search.set("page", `${page}`);
         router.push(`?${search.toString()}`, { scroll: true });
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-            left: 0
-        })
     }, [router, searchParamsRef])
 
     return (
