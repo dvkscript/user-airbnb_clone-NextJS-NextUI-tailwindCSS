@@ -8,9 +8,6 @@ import useDictionary from '@/hooks/useDictionary';
 import { signIn, signUp } from '@/services/auth.service';
 import { ModalMode } from '@/enum/modalMode';
 import Translate from '../Common/Translate';
-import { setCookies } from '@/libs/cookies.server';
-import { addDays } from 'date-fns';
-import CookieConfig from '@/configs/cookie.config';
 import { TSignInValidator, TSignUpValidator } from '@/validators/auth.validator';
 import { UseFormReturn } from 'react-hook-form';
 import useToast from '@/hooks/useToast';
@@ -27,14 +24,8 @@ const ModalAuth = ({
 
     const handleWinDownMessage = useCallback((response: ResponseUtil<any>) => {
         setIsLoading(true);
+        
         if (response?.ok) {
-            setCookies([
-                { name: CookieConfig.accessToken.name, value: response.data?.accessToken },
-                { name: CookieConfig.refreshToken.name, value: response.data?.refreshToken },
-            ], {
-                httpOnly: true,
-                expires: addDays(new Date(), 30)
-            });
             onClose();
             router.refresh()
         } else {

@@ -13,12 +13,13 @@ import { loaderSelector } from '@/hooks/selectors/systemSelector';
 import { HeaderValue } from '@/configs/header.config';
 import { useRouter } from 'next/navigation';
 import { I18nProvider } from '@react-aria/i18n';
+import { GetProfile } from '@/services/user.service';
 
 interface ProviderProps extends Omit<ThemeProviderProps, "children"> {
     children?: React.ReactNode;
     dictionary: Dictionary;
     localeSystems: LocaleSystems;
-    profile: HeaderValue<"user">;
+    profile: GetProfile | null;
     isAuthorization: HeaderValue<"isAuthorization">;
     lang: Locale;
 }

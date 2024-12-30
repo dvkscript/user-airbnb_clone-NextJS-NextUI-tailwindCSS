@@ -32,6 +32,7 @@ export const socialLoginCallBack = responseUtil.catchError(
     ) => {
         apiClient.setQuery(searchParams);
         const result = await apiClient.get<TokenService>(router.providers[provider].callback);
+
         return result;
     }
 )

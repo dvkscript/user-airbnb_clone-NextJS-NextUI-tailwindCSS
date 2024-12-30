@@ -10,12 +10,11 @@ const CallbackClient: FC<CallbackClientProps> = ({
 
     useEffect(() => {
         if (data) {
+            window.close();
             (async () => {
                 await window.opener?.postMessage({ type: "authentication", data }, window.location.origin);
             })();
-            window.close();
         }
-
     }, [data]);
     return (
         <>

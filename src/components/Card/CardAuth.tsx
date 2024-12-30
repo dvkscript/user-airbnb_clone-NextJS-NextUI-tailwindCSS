@@ -14,6 +14,9 @@ import useDictionary from "@/hooks/useDictionary";
 import { UseFormReturn } from "react-hook-form";
 import { Mail } from "lucide-react";
 import { cn } from "@/utils/dom.util";
+import { setCookies } from "@/libs/cookies.server";
+import CookieConfig from "@/configs/cookie.config";
+import { addDays } from "date-fns";
 
 interface CardAuthProps {
     formMode?: "login" | "register";
@@ -44,7 +47,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
 
     const handleRedirect = useCallback(async (provider: any) => {
         const result = await getSocialRedirectLink(provider);
-        
+
         if (result.ok) {
             const width = 500;
             const height = 600;
@@ -73,10 +76,15 @@ const CardAuth: React.FC<CardAuthProps> = ({
     const handleWinDownMessage = useCallback(async (event: MessageEvent<any>) => {
         if (event.origin !== window.location.origin) return;
         if (event.data.type !== "authentication") return;
-        const result = event.data?.data || {};
-        console.log(result);
-        
-        onWindowMessage(result);
+        const response = event.data?.data || {};
+        setCookies([
+            { name: CookieConfig.accessToken.name, value: response.data?.accessToken },
+            { name: CookieConfig.refreshToken.name, value: response.data?.refreshToken },
+        ], {
+            httpOnly: true,
+            expires: addDays(new Date(), 30)
+        });
+        onWindowMessage(response);
     }, [onWindowMessage]);
 
     useEffect(() => {

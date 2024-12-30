@@ -1,9 +1,9 @@
-import { HeaderValue } from "@/configs/header.config";
 import { Permissions } from "@/enum/permissions.enum";
+import { GetProfile } from "@/services/user.service";
 import { createStore, StateCreator } from "zustand";
 
 const profileUserStore = (set: Set) => ({
-    profile: null as HeaderValue<"user">,
+    profile: null as GetProfile | null,
     setProfile(profile: typeof this.profile) {
         set({
             profile,

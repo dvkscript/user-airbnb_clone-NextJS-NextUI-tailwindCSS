@@ -7,6 +7,7 @@ import { cn } from "@/utils/dom.util";
 import { airbnbFont } from "@/fonts";
 import { Metadata } from "next";
 import { getHeaderValue } from "@/libs/next-headers";
+import { getProfile } from "@/services/user.service";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -39,15 +40,17 @@ export default async function RootLayout({
 }: RootLayoutProps) {
   const [
     dictionary,
-    localeSystems
+    localeSystems,
+    profileRes
   ] = await Promise.all([
     getDictionary(lang),
-    getLocaleSystems()
+    getLocaleSystems(),
+    getProfile(),
   ]);
 
-  const profile = getHeaderValue("user");
+  const profile = profileRes.data;
   const isAuthorization = getHeaderValue("isAuthorization");
-
+  
   return (
     <html lang={lang} suppressHydrationWarning className="h-full w-full">
       <body

@@ -1,4 +1,3 @@
-import { GetProfile } from "@/services/user.service";
 
 const HeaderConfig = Object.freeze({
     isAuthorization: {
@@ -12,10 +11,6 @@ const HeaderConfig = Object.freeze({
         name: "x-next-url",
         values: null
     },
-    user: {
-        name: "x-user",
-        values: null,
-    }
 });
 
 type HeaderConfigType = typeof HeaderConfig;
@@ -25,8 +20,6 @@ export type HeaderValue<Name extends keyof HeaderConfigType> =
     ? boolean
     : Name extends "nextUrl"
     ? Record<string, string>
-    : Name extends "user"
-    ? Omit<GetProfile, "id"> & { isAdmin: boolean } | null
     : never;
 
 

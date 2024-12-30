@@ -1,6 +1,5 @@
 import CookieConfig from "@/configs/cookie.config";
-import HeaderConfig, { HeaderValue } from "@/configs/header.config";
-import { Permissions } from "@/enum/permissions.enum";
+import HeaderConfig from "@/configs/header.config";
 import { refreshToken } from "@/services/auth.service";
 import { getProfile } from "@/services/user.service";
 import { addDays } from "date-fns";
@@ -13,29 +12,14 @@ export default async function authMiddleware(req: NextRequest) {
     const locale = pathnames[0];
     const headers = req.headers;
     headers.set(HeaderConfig.isAuthorization.name, HeaderConfig.isAuthorization.values.false);
-    headers.set(HeaderConfig.user.name, JSON.stringify(null));
 
-    const { status, ok, message, data } = await getProfile();
+    const { status, ok, message } = await getProfile();
     console.log("message profile: ", message);
 
 
     const homeRedirectRes = NextResponse.redirect(new URL(`/${locale}`, req.url));
     const tokenExpiredRedirectRes = NextResponse.rewrite(new URL(`/${locale}/token-expired`, req.url));
     const pathnamePrivate = ["hosting", "become-a-host"];
-
-    if (data) {
-        headers.set(HeaderConfig.user.name, JSON.stringify({
-            isAdmin: data.permissions.includes(Permissions.ADMIN_ACCESS),
-            full_name: data.full_name,
-            email: data.email,
-            profile: data.profile,
-            roles: data.roles,
-            permissions: data.permissions,
-            created_at: data.created_at,
-            updated_at: data.updated_at,
-            status: data.status,
-        } as HeaderValue<"user">));
-    }
 
     const res = NextResponse.next({
         request: {
