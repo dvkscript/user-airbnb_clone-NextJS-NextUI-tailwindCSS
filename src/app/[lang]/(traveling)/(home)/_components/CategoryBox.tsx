@@ -39,7 +39,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         src={image}
         alt={label}
         className='dark:invert'
-        defaultUrl='/not-found.jpg'
+        defaultUrl='/images/not-found.jpg'
         radius='none'
         classNames={{
           img: "w-[24px] h-[24px] m-1",

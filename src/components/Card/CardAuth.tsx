@@ -44,7 +44,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
 
     const handleRedirect = useCallback(async (provider: any) => {
         const result = await getSocialRedirectLink(provider);
-
+        
         if (result.ok) {
             const width = 500;
             const height = 600;
@@ -74,6 +74,8 @@ const CardAuth: React.FC<CardAuthProps> = ({
         if (event.origin !== window.location.origin) return;
         if (event.data.type !== "authentication") return;
         const result = event.data?.data || {};
+        console.log(result);
+        
         onWindowMessage(result);
     }, [onWindowMessage]);
 
