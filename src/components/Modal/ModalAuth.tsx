@@ -20,7 +20,7 @@ const ModalAuth = ({
     const router = useRouter();
     const [emailRegister, setEmailRegister] = useState<string>("");
     const { d } = useDictionary("auth", d => d);
-    const { toastRes } = useToast()
+    const { toastRes } = useToast();
 
     const handleWinDownMessage = useCallback((response: ResponseUtil<any>) => {
         setIsLoading(true);
