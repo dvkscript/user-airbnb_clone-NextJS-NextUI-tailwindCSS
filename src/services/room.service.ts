@@ -70,7 +70,7 @@ export const getRoomDetail = responseUtil.catchError(
 )
 
 export const roomBooking = responseUtil.catchError(
-    async (roomId: string, body: { paymentMethod: string, amount: number }) => {
+    async (roomId: string, body: { checkIn: string, checkout: string, guests: number, adults: number, children: number, infants: number, pets: number }) => {
         apiClient.setToken(await getCookie(CookieConfig.accessToken.name));
         return await apiClient.post(router.booking(roomId), body)
     }

@@ -1,11 +1,10 @@
 "use client"
-import BreakpointConfig from "@/configs/breakpoints.config";
 import useDictionary from "@/hooks/useDictionary";
 import useWindowEvent from "@/hooks/useWindowEvent";
 import { cn } from "@/utils/dom.util";
 import { Button, RangeCalendarProps } from "@nextui-org/react";
 import { useDateFormatter } from "@react-aria/i18n";
-import React, { useEffect, useState } from "react"
+import React, { useMemo } from "react"
 import { GetRoomDetail } from "@/services/room.service";
 import useSystemStore from "@/hooks/useSystemStore";
 import { locationSelector } from "@/hooks/selectors/systemSelector";
@@ -26,23 +25,16 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
 }) => {
     const { countries } = useSystemStore(locationSelector)
     const { screen } = useWindowEvent()
-    const [visibleMonths, setVisibleMonths] = useState(1);
     const { d } = useDictionary("rooms", d => d.booking)
     const btnMsg = useDictionary("common", d => d.buttons).t;
+
+    const visibleMonths = useMemo(() => ((screen?.key === "sm") ? 1 : 2), [screen]);
     const dateFormatter = useDateFormatter({
-        day: "numeric",    
-        month: "short",   
-        year: "numeric"  
+        day: "numeric",
+        month: "short",
+        year: "numeric"
     });
     const { bookForm: { dates, totalNight }, setBookValue } = useRoomStore(bookingRoomSelector)
-
-    useEffect(() => {
-        if (screen && screen.minWidth < BreakpointConfig.md.minWidth) {
-            setVisibleMonths(1)
-        } else {
-            setVisibleMonths(2)
-        }
-    }, [screen]);
 
     return (
         <>
@@ -89,11 +81,16 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
                         visibleMonths={visibleMonths}
                         minValue={minDate}
                         classNames={{
-                            cellButton: "sm:p-8 md:p-[23px] lg:p-5",
-                            gridHeaderCell: "sm:p-8 md:p-[23px] lg:p-5",
-                            title: "text-base font-medium",
-                            gridHeader: "bg-inherit shadow-none",
                             headerWrapper: "py-4",
+                            ...(visibleMonths === 1 ? {
+                                cellButton: "absolute inset-0 p-[50%]",
+                                gridHeaderCell: "p-[6.838%]",
+                                cell: "p-[6.435%] relative",
+                            } : {
+                                cellButton: "absolute inset-0 p-[50%]",
+                                gridHeaderCell: "p-[7.3%]",
+                                cell: "p-[6.5%] relative",
+                            })
                         }}
                         value={dates}
                         onChange={(dates) => setBookValue("dates", dates)}

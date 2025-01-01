@@ -12,7 +12,6 @@ import { ResponseUtil } from "@/utils/response.util";
 import { TSignInValidator, TSignUpValidator } from "@/validators/auth.validator";
 import useDictionary from "@/hooks/useDictionary";
 import { UseFormReturn } from "react-hook-form";
-import { Mail } from "lucide-react";
 import { cn } from "@/utils/dom.util";
 import { setCookies } from "@/libs/cookies.server";
 import CookieConfig from "@/configs/cookie.config";
@@ -63,16 +62,6 @@ const CardAuth: React.FC<CardAuthProps> = ({
         }
     }, []);
 
-    const handleRedirectClick = useCallback((provider: typeof ApiProviders[number]) => {
-        if (provider === "google" || provider === "github") {
-            handleRedirect(provider)
-        } else {
-            toast.message(`Đăng nhập ${provider} chưa làm, tui để cho đẹp thôi :v`, {
-                position: "top-center"
-            });
-        }
-    }, [handleRedirect])
-
     const handleWinDownMessage = useCallback(async (event: MessageEvent<any>) => {
         if (event.origin !== window.location.origin) return;
         if (event.data.type !== "authentication") return;
@@ -119,39 +108,20 @@ const CardAuth: React.FC<CardAuthProps> = ({
             <div className="flex flex-wrap items-center justify-between gap-3">
                 {
                     ApiProviders.map((provider, index) => {
-                        const IconComponent = provider !== "email" ? Icons[provider as keyof typeof Icons] : Icons["mailGoogle"];
-                        if (ApiProviders.length - 1 === index) {
-                            return (
-                                <Button
-                                    key={`${provider}-${index}`}
-                                    startContent={<Mail size={24} className="absolute left-5 top-[50%] translate-y-[-50%] text-default-600" />}
-                                    onPress={() => handleRedirectClick(provider)}
-                                    variant='bordered'
-                                    size='lg'
-                                    isLoading={isLoading}
-                                    className={cn(
-                                        'min-h-11 px-2 grow border-1.5 w-full',
-                                    )}
-                                >
-                                    {t("provider", provider)}
-                                </Button>
-                            )
-                        }
+                        const IconComponent = Icons[provider as keyof typeof Icons];
                         return (
                             <Button
                                 key={`${provider}-${index}`}
-                                onPress={() => handleRedirectClick(provider)}
+                                onPress={() => handleRedirect(provider)}
                                 variant='bordered'
                                 size='lg'
                                 isLoading={isLoading}
                                 className={cn(
-                                    'min-h-11 px-2 grow border-1.5',
-                                    ApiProviders.length - 1 === index && "w-full"
+                                    'min-h-11 px-2 grow border-1.5 w-full',
                                 )}
+                                startContent={!!IconComponent && <IconComponent className='absolute left-5 top-[50%] translate-y-[-50%] text-default-600' />}
                             >
-                                {
-                                    !!IconComponent && <IconComponent className='w-[24px] h-[24px]' />
-                                }
+                                {t("provider", provider)}
                             </Button>
                         )
                     })

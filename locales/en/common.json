@@ -112,11 +112,15 @@
     "units": {
         "items": {
             "night": "night",
+            "nights": "nights",
             "guest": "guest",
             "pets": "pets",
             "infants": "infants",
             "dates": "dates",
-            "guests": "guests"
+            "guests": "guests",
+            "bedroom": "bedroom",
+            "bed": "bed",
+            "bath": "bath"
         }
     },
     "forms": {
@@ -132,6 +136,7 @@
         },
         "guests": {
             "label": "Guests",
+            "maxGuest": "This place has a maximum of {{guest}} guests, not including infants. If you're bringing more than 2 pets, please let your host know.",
             "options": {
                 "adults": {
                     "label": "Adults",

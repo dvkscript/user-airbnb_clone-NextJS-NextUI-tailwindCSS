@@ -11,11 +11,7 @@
         }
     },
     "trip": {
-        "title": "Chuyến đi của bạn",
-        "modal": {
-            "title": "Khách",
-            "description": "Chỗ ở này cho phép tối đa {{guest}} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết."
-        }
+        "title": "Chuyến đi của bạn"
     },
     "pay": {
         "title": "Thanh toán bằng"

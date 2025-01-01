@@ -108,14 +108,15 @@ const ModalWishlist = ({
             setWishlistId(res.data!.id);
             toast.custom((t) => toastCustom(t, inputValue, roomSelected), {
                 ...toastOption,
-            })
+            });
         }
         setIsLoading(false);
 
         if (!res?.ok) {
             return toastRes(res);
         }
-        handleClose()
+        setIsOpenModal(false);
+        setIsOpen(false);
     }, [
         inputValue,
         roomSelected,
@@ -123,7 +124,8 @@ const ModalWishlist = ({
         setIsLoading,
         toastOption,
         toastCustom,
-        handleClose,
+        setIsOpenModal,
+
     ]);
 
     const handleAddRoomWishlist = useCallback(async (w: GetWishlists[number]) => {
@@ -142,7 +144,7 @@ const ModalWishlist = ({
         toast.custom((t) => toastCustom(t, w.name, roomSelected), {
             ...toastOption,
         });
-        handleClose()
+        handleClose();
     }, [roomSelected, toastRes, handleClose, toastOption, toastCustom])
 
     useEffect(() => {
@@ -178,7 +180,7 @@ const ModalWishlist = ({
                     setIsOpen(true);
                 }
             } else {
-                 setIsOpen(true);
+                setIsOpen(true);
             }
         }
     }, [isOpen, wishlistId, wishlists, handleAddRoomWishlist, setIsOpen, toastOption.position, isOpenModal])

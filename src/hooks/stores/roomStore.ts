@@ -4,6 +4,7 @@ import { Discount as DiscountEnum } from "@/enum/room";
 import { RangeCalendarProps } from "@nextui-org/react"
 import { formatDate } from "@/utils/dom.util";
 import { CalendarDate } from "@internationalized/date";
+import { differenceInDays } from "date-fns";
 
 const step0 = (roomId: string) => ([
     { name: "overview", pathname: "/become-a-host/overview" },
@@ -175,10 +176,7 @@ const bookingRoomStore = (set: Set, get: Get) => ({
             const startDate = new Date(dates.start.toString());
             const endDate = new Date(dates.end.toString());
 
-            const differenceInTime = endDate.getTime() - startDate.getTime();
-            const differenceInDays = differenceInTime / (1000 * 60 * 60 * 24);
-
-            totalNight = differenceInDays;
+            totalNight = differenceInDays(endDate, startDate);
         };
 
         const values = {

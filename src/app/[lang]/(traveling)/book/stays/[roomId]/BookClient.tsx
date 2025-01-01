@@ -4,9 +4,7 @@ import Container from "@/components/Common/Container";
 import { bookingRoomSelector } from "@/hooks/selectors/roomSelector";
 import useDictionary from "@/hooks/useDictionary";
 import useRoomStore from "@/hooks/useRoomStore";
-// import useUrl from "@/hooks/useUrl";
-import { GetRoomDetail } from "@/services/room.service";
-// import { getLocalTimeZone, today } from "@internationalized/date";
+import { GetRoomDetail, roomBooking } from "@/services/room.service";
 import { ChevronLeft } from "lucide-react";
 import { useRouter } from "next-nprogress-bar";
 import React, { useCallback, useMemo, useRef, useState } from "react"
@@ -17,8 +15,8 @@ import PriceDetail from "./_components/PriceDetail";
 import StripeProvider from "@/components/Pay/Stripe/StripeProvider";
 import StripeCard from "@/components/Pay/Stripe/StripeCard";
 import { Stripe, StripeElements } from "@stripe/stripe-js";
-// import { useParams } from "next/navigation";
 import BookAuth from "./_components/Auth";
+import { useParams } from "next/navigation";
 import { toast } from "sonner";
 
 interface BookClientProps {
@@ -40,11 +38,11 @@ const BookClient: React.FC<BookClientProps> = ({
     const [isLoading, setIsLoading] = useState(false);
     const btnMsg = useDictionary("common", d => d.buttons).t;
     const [
-        errorMsg, 
-        // setErrorMsg
+        errorMsg,
+        setErrorMsg
     ] = useState<string>();
     const submitBtnRef = useRef<HTMLInputElement | null>(null);
-    // const roomId = useParams().roomId as string;
+    const roomId = useParams().roomId as string;
 
     const prices = useMemo(() => {
         return handleBookingPrice(room.original_price, bookForm.totalNight, room.fee, room.discounts)
@@ -73,19 +71,12 @@ const BookClient: React.FC<BookClientProps> = ({
         router.push(`/rooms/${room.id}?${search.toString()}`);
     }, [router, bookForm, room.id, searchParamKeys]);
 
-    const handleSubmit = useCallback(async ({  }: { stripe: Stripe, elements: StripeElements }) => {
+    const handleSubmit = useCallback(async ({ stripe, elements }: { stripe: Stripe, elements: StripeElements }) => {
         setIsLoading(true);
-        toast.message("Đang làm, chưa xong")
-        const room = {
-            ...bookForm,
-        };
+        if (!bookForm.dates) return;
 
-        // const dates = room.dates;
+        return toast.warning("Đang làm dở, sắp xong rùi :v")
 
-        delete room.dates;
-
-        console.log(bookForm);
-        
         // const [{ error: submitError }, { error: methodError, paymentMethod }] = await Promise.all([
         //     elements.submit(),
         //     stripe.createPaymentMethod({
@@ -99,16 +90,26 @@ const BookClient: React.FC<BookClientProps> = ({
         //     return;
         // };
 
-        // const res = await roomBooking(roomId,
-        //     {
-        //         paymentMethod: paymentMethod.id,
-        //         amount: prices.totalCost,
-        //     }
-        // );
-        setIsLoading(false);
+        
+        
+        // const data = {
+        //     checkIn: bookForm.dates?.start.toString(),
+        //     checkout: bookForm.dates.end.toString(),
+        //     guests: bookForm.guests,
+        //     adults: bookForm.adults,
+        //     children: bookForm.children,
+        //     infants: bookForm.infants,
+        //     pets: bookForm.pets,
+        // };
+
+
+        // const res = await roomBooking(roomId, data);
+        // console.log(res);
+        
+        // setIsLoading(false);
     }, [bookForm]);
 
-    
+
 
     return (
         <>

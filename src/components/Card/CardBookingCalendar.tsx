@@ -1,25 +1,35 @@
 "use client"
 import React, { useCallback, useEffect, useMemo, useState } from "react"
 import RangeCalendar from "../Common/RangeCalendar";
-import { CalendarDate, getLocalTimeZone, today } from "@internationalized/date";
-import { Input } from "@nextui-org/react";
+import { CalendarDate } from "@internationalized/date";
+import { Input, RangeCalendarProps } from "@nextui-org/react";
 import { Info } from "lucide-react";
 import useRoomStore from "@/hooks/useRoomStore";
 import { bookingRoomSelector } from "@/hooks/selectors/roomSelector";
 import useUrl from "@/hooks/useUrl";
-// import useSystemStore from "@/hooks/useSystemStore";
-// import { locationSelector } from "@/hooks/selectors/systemSelector";
 import { cn, formatDate } from "@/utils/dom.util";
-import { useDateFormatter } from "@react-aria/i18n";
 import useDictionary from "@/hooks/useDictionary";
+import useWindowEvent from "@/hooks/useWindowEvent";
 
 const dateFormat = 'dd/mm/yyyy';
 
-const CardBookingCalendar = ({ }) => {
+interface CardBookingCalendarProps {
+    minDate: NonNullable<RangeCalendarProps["minValue"]>;
+    onChange?: RangeCalendarProps["onChange"];
+    title?: React.ReactNode;
+    description?: React.ReactNode;
+}
+
+const CardBookingCalendar = ({
+    minDate,
+    onChange,
+    description,
+    title
+}: CardBookingCalendarProps) => {
     const { bookForm, setBookValue, setBookFormBySearchParams } = useRoomStore(bookingRoomSelector);
     const { searchParamsRef } = useUrl();
-    // const { countries } = useSystemStore(locationSelector);
     const formMsg = useDictionary("common", d => d.forms).d;
+    const { screen } = useWindowEvent();
     const [formData, setFormData] = useState({
         start: "",
         end: ""
@@ -32,23 +42,7 @@ const CardBookingCalendar = ({ }) => {
         start: false
     });
 
-    const minDate = useMemo(() => {
-        const now = new Date();
-        const currentHour = now.getHours();
-        const timeZone = getLocalTimeZone();
-        const currentDate = today(timeZone);
-
-        if (currentHour >= 16) {
-            return currentDate.add({ days: 1 });
-        }
-        return currentDate;
-    }, []);
-
-    const dateFormatter = useDateFormatter({
-        day: "numeric",
-        month: "short",
-        year: "numeric"
-    });
+    const visibleMonths = useMemo(() => ((screen?.key === "sm") ? 1 : 2), [screen])
 
     const setFormValue = useCallback(<T extends typeof formData, K extends keyof T>(key: K, value: T[K]) => {
         setFormData({
@@ -131,51 +125,46 @@ const CardBookingCalendar = ({ }) => {
 
     }, [formData, minDate, error, setBookValue]);
 
+    useEffect(() => {
+        if (Object.values(error).some(e => e)) {
+            setBookValue("dates", null)
+        }
+    }, [error, setBookValue])
 
     useEffect(() => {
         setBookFormBySearchParams(
             searchParamsRef.current,
             minDate,
         )
-    }, [searchParamsRef, setBookFormBySearchParams, minDate])
+    }, [searchParamsRef, setBookFormBySearchParams, minDate]);
+    
+    useEffect(() => {
+        if (bookForm.dates) {
+            const start = bookForm.dates.start;
+            const end = bookForm.dates.end;
+            setFormData({
+                start: formatDate([start.day, start.month, start.year].join("/"), dateFormat) || "",
+                end: formatDate([end.day, end.month, end.year].join("/"), dateFormat) || ""
+            })
+        } else {
+            setFormData({
+                end: "",
+                start: ""
+            })
+        }
+    }, [bookForm.dates]);
 
     return (
-        <div>
+        <div className="w-full h-full bg-inherit">
             <div className="flex justify-between w-full items-center gap-x-6">
                 <div>
-                    <p className="text-subtitle">
-                        {/* {
-                            bookForm.totalNight !== 0 ?
-                                d?.titles.staySummary.
-                                    replace("{{day}}", `${bookForm.totalNight}`).
-                                    replace(
-                                        "{{address}}",
-                                        [
-                                            address.province,
-                                            countries[address.country_code as keyof typeof countries].native
-                                        ].filter(a => a).join(", ")) :
-                                d?.titles.select
-                        } */}
-                    </p>
+                    <h3 className="text-subtitle">
+                        {title}
+                    </h3>
 
-                    <p className="text-description-accent text-accent pt-2 h-9">
-                        {
-                            !bookForm.dates ? (
-                                // d?.description
-                                ""
-                            ) : (
-                                <>
-                                    <time dateTime={bookForm.dates.start.toString()}>
-                                        {dateFormatter.format(new Date(bookForm.dates.start.toString()))}
-                                    </time>
-                                    {" - "}
-                                    <time dateTime={bookForm.dates.end.toString()}>
-                                        {dateFormatter.format(new Date(bookForm.dates.end.toString()))}
-                                    </time>
-                                </>
-                            )
-                        }
-                    </p>
+                    <div className="text-description-accent text-accent pt-2 h-9">
+                        {description}
+                    </div>
                 </div>
                 <div>
                     <div
@@ -238,17 +227,23 @@ const CardBookingCalendar = ({ }) => {
             </div>
             <div className="pt-4">
                 <RangeCalendar
-                    visibleMonths={2}
+                    visibleMonths={visibleMonths}
                     minValue={minDate}
                     classNames={{
-                        cellButton: "p-5",
-                        gridHeaderCell: "p-5",
                         headerWrapper: "py-4",
+                        ...(visibleMonths === 1 ? {
+                            cellButton: "absolute inset-0 p-[50%]",
+                            gridHeaderCell: "p-[6.838%]",
+                            cell: "p-[6.435%] relative",
+                        } : {
+                            cellButton: "p-5",
+                            gridHeaderCell: "p-5",
+                        })
                     }}
-                    value={bookForm.dates}
+                    value={bookForm.dates || null}
                     onChange={(dates) => {
-                        // setIsPopoverDateRanger(false);
                         setBookValue("dates", dates);
+                        if (onChange) onChange(dates)
                     }}
                 />
             </div>

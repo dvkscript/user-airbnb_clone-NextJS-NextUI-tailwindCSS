@@ -112,11 +112,15 @@
     "units": {
         "items": {
             "night": "đêm",
+            "nights": "đêm",
             "guest": "khách",
             "pets": "thú cưng",
             "infants": "em bé",
             "dates": "ngày",
-            "guests": "khách"
+            "guests": "khách",
+            "bedroom": "phòng ngủ",
+            "bed": "giường",
+            "bath": "phòng tắm"
         }
     },
     "forms": {
@@ -132,6 +136,7 @@
         },
         "guests": {
             "label": "Khách",
+            "maxGuest": "Chỗ ở này cho phép tối đa {{guest}} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết.",
             "options": {
                 "adults": {
                     "label": "Người lớn",

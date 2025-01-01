@@ -7,12 +7,6 @@
             "Location": "Location"
         }
     },
-    "floor-plan": {
-        "guests": "guests",
-        "bedroom": "bedroom",
-        "bed": "bed",
-        "bath": "bath"
-    },
     "subtitles": {
         "ENTIRE": "Entire house at {{value}}",
         "ROOMS": "Entire room at {{value}}",
@@ -38,7 +32,7 @@
     },
     "booking": {
         "titles": {
-            "staySummary": "{{day}} nights in {{address}}",
+            "staySummary": "{{day}} nights",
             "add": "Add dates for prices",
             "select": "Select dates"
         },
@@ -46,8 +40,7 @@
         "form": {
             "messages": {
                 "validate": "This date is unavailable",
-                "alert": "You won't be charged yet",
-                "maxGuest": "This place has a maximum of {{guest}} guests, not including infants. If you're bringing more than 2 pets, please let your host know."
+                "alert": "You won't be charged yet"
             }
         }
     },

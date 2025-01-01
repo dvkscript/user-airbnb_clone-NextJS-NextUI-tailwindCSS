@@ -7,12 +7,6 @@
             "Location": "Vị trí"
         }
     },
-    "floor-plan": {
-        "guests": "khách",
-        "bedroom": "phòng ngủ",
-        "bed": "giường",
-        "bath": "phòng tắm"
-    },
     "subtitles": {
         "ENTIRE": "Toàn bộ nhà tại {{value}}",
         "ROOMS": "Toàn bộ phòng tại {{value}}",
@@ -38,7 +32,7 @@
     },
     "booking": {
         "titles": {
-            "staySummary": "{{day}} đêm tại {{address}}",
+            "staySummary": "{{day}} đêm",
             "add": "Thêm ngày để xem giá",
             "select": "Chọn ngày"
         },
@@ -46,8 +40,7 @@
         "form": {
             "messages": {
                 "validate": "Ngày này không còn trống",
-                "alert": "Bạn vẫn chưa bị trừ tiền",
-                "maxGuest": "Chỗ ở này cho phép tối đa {{guest}} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết."
+                "alert": "Bạn vẫn chưa bị trừ tiền"
             }
         }
     },

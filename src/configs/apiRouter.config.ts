@@ -5,22 +5,18 @@ const ApiRouter = Object.freeze({
         refreshToken: "/auth/refresh-token",
         signOut: "/auth/sign-out",
         providers: {
-            github: {
-                redirect: "/auth/github",
-                callback: "/auth/github/callback"
-            },
             google: {
                 redirect: "/auth/google",
                 callback: "/auth/google/callback"
             },
-            facebook: {
-                redirect: "/auth/facebook",
-                callback: "/auth/facebook/callback"
+            github: {
+                redirect: "/auth/github",
+                callback: "/auth/github/callback"
             },
-            email: {
-                redirect: "/auth/email",
-                callback: "/auth/email/callback"
-            },
+            // facebook: {
+            //     redirect: "/auth/facebook",
+            //     callback: "/auth/facebook/callback"
+            // },
         }
     },
     user: {

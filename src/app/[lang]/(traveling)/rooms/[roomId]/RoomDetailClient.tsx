@@ -62,7 +62,6 @@ const RoomDetailClient: React.FC<RoomDetailClientProps> = ({
     const feeMsg = useDictionary("common", d => d.fees).t;
     const priceMsg = useDictionary("common", d => d.prices).t;
     const offerMsg = useDictionary("common", d => d.offers).t;
-    const floorPlanMsg = useDictionary("rooms", d => d["floor-plan"]).t;
     const subtitleMsg = useDictionary("rooms", d => d["subtitles"]).t;
     const [isFavorite, setIsFavorite] = useState(!!room.wishlists);
     const { countries } = useSystemStore(locationSelector);
@@ -261,19 +260,19 @@ const RoomDetailClient: React.FC<RoomDetailClientProps> = ({
                                     </h2>
                                     <ol className="flex text-sm md:text-base">
                                         <li className="list-none">
-                                            {room.floorPlan.guests} {floorPlanMsg("guests")}
+                                            {room.floorPlan.guests} {unitMsg("guests")}
                                         </li>
                                         <li>
                                             <Dot size={15} className="inline-block" />
-                                            {room.floorPlan.bedrooms} {floorPlanMsg("bedroom")}
+                                            {room.floorPlan.bedrooms} {unitMsg("bedroom")}
                                         </li>
                                         <li>
                                             <Dot size={15} className="inline-block" />
-                                            {room.floorPlan.bedrooms} {floorPlanMsg("bed")}
+                                            {room.floorPlan.bedrooms} {unitMsg("bed")}
                                         </li>
                                         <li>
                                             <Dot size={15} className="inline-block" />
-                                            {room.floorPlan.bathrooms} {floorPlanMsg("bath")}
+                                            {room.floorPlan.bathrooms} {unitMsg("bath")}
                                         </li>
                                     </ol>
                                 </section>
@@ -321,7 +320,6 @@ const RoomDetailClient: React.FC<RoomDetailClientProps> = ({
                                 <CardBody className="overflow-visible py-2 gap-y-3">
                                     <BookingForm
                                         minDate={minDate}
-                                        address={room.address}
                                         isPopoverDateRanger={isPopoverDateRanger}
                                         setIsPopoverDateRanger={setIsPopoverDateRanger}
                                     />

@@ -12,9 +12,8 @@
     },
     "trip": {
         "title": "Your trip",
-        "modal": {
-            "title": "Guests",
-            "description": "This place has a maximum of {{guest}} guests, not including infants. If you're bringing more than 2 pets, please let your host know."
+        "dates": {
+            "title": "{{day}} nights"
         }
     },
     "pay": {
