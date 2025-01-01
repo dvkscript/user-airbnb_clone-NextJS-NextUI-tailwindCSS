@@ -4,7 +4,7 @@ import Container from "@/components/Common/Container";
 import { bookingRoomSelector } from "@/hooks/selectors/roomSelector";
 import useDictionary from "@/hooks/useDictionary";
 import useRoomStore from "@/hooks/useRoomStore";
-import { GetRoomDetail, roomBooking } from "@/services/room.service";
+import { GetRoomDetail } from "@/services/room.service";
 import { ChevronLeft } from "lucide-react";
 import { useRouter } from "next-nprogress-bar";
 import React, { useCallback, useMemo, useRef, useState } from "react"
@@ -16,7 +16,7 @@ import StripeProvider from "@/components/Pay/Stripe/StripeProvider";
 import StripeCard from "@/components/Pay/Stripe/StripeCard";
 import { Stripe, StripeElements } from "@stripe/stripe-js";
 import BookAuth from "./_components/Auth";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 import { toast } from "sonner";
 
 interface BookClientProps {
@@ -39,10 +39,10 @@ const BookClient: React.FC<BookClientProps> = ({
     const btnMsg = useDictionary("common", d => d.buttons).t;
     const [
         errorMsg,
-        setErrorMsg
+        // setErrorMsg
     ] = useState<string>();
     const submitBtnRef = useRef<HTMLInputElement | null>(null);
-    const roomId = useParams().roomId as string;
+    // const roomId = useParams().roomId as string;
 
     const prices = useMemo(() => {
         return handleBookingPrice(room.original_price, bookForm.totalNight, room.fee, room.discounts)
@@ -71,7 +71,7 @@ const BookClient: React.FC<BookClientProps> = ({
         router.push(`/rooms/${room.id}?${search.toString()}`);
     }, [router, bookForm, room.id, searchParamKeys]);
 
-    const handleSubmit = useCallback(async ({ stripe, elements }: { stripe: Stripe, elements: StripeElements }) => {
+    const handleSubmit = useCallback(async ({  }: { stripe: Stripe, elements: StripeElements }) => {
         setIsLoading(true);
         if (!bookForm.dates) return;
 
