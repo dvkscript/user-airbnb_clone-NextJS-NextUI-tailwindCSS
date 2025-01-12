@@ -26,7 +26,7 @@ const YourTrip: React.FC<YourTripProps> = ({
     const { d } = useDictionary("book", d => d.trip);
     const unitMsg = useDictionary("common", d => d.units.items).t;
     const btnMsg = useDictionary("common", d => d.buttons).t;
-    const { bookForm, setBookFormBySearchParams, setMaxGuest } = useRoomStore(bookingRoomSelector);
+    const { bookForm, setBookFormBySearchParams, setMaxGuest, setBookForm, maxGuest } = useRoomStore(bookingRoomSelector);
     const [modalMode, setModalMode] = useState<"guests" | "days" | null>(null);
     const { searchParamsRef } = useUrl();
     const formMsg = useDictionary("common", d => d.forms).d;
@@ -186,7 +186,16 @@ const YourTrip: React.FC<YourTripProps> = ({
                             <p className="text-sm text-accent pb-2">
                                 {formMsg?.guests.maxGuest.replace("{{guest}}", room.floorPlan.guests.toString())}
                             </p>
-                            <CardGuest />
+                            <CardGuest 
+                                values={bookForm}
+                                onValueChange={(values) => {
+                                    setBookForm({
+                                        ...values,
+                                        dates: bookForm.dates
+                                    })
+                                }}
+                                maxGuest={maxGuest}
+                            />
                         </ModalBody>
                         <Divider />
                         <ModalFooter>

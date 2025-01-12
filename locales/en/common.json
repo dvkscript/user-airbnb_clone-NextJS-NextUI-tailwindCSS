@@ -89,7 +89,8 @@
         "Message Host": "Message Host",
         "Edit": "Edit",
         "Request to book": "Request to book",
-        "Continue": "Continue"
+        "Continue": "Continue",
+        "Search": "Search"
     },
     "status": {
         "active": "Active",

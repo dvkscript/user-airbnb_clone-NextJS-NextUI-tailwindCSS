@@ -63,7 +63,16 @@ export default function useWindowEvent() {
     }, []);
 
     useEffect(() => {
+        setScrollX(window.scrollX);
+        setScrollY(window.scrollY);
+        if (window.scrollY > 10) {
+            setIsScroll(true);
+        }
         window.addEventListener("scroll", handleScroll);
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        });
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -73,15 +82,6 @@ export default function useWindowEvent() {
         handleScroll,
         handleResize
     ]);
-
-    useEffect(() => {
-        setScrollX(window.scrollX);
-        setScrollY(window.scrollY);
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        });
-    }, []);
 
     return {
         isScroll,

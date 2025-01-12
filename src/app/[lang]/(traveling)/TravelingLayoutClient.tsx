@@ -65,7 +65,7 @@ const TravelingLayoutClient: React.FC<TravelingLayoutClientProps> = ({
         >
             {children}
             <div className={cn(
-                "fixed inset-x-0 bottom-0 h-fit bg-inherit z-50 transition-height",
+                "fixed inset-x-0 bottom-0 h-fit bg-inherit z-40 transition-height",
             )}>
                 {!!pathnames[1] ? null : <>
                     <Button

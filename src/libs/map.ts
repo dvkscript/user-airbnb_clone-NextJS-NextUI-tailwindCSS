@@ -19,6 +19,7 @@ export const mapSearch = async (value: string, searchParams?: Params & { locale?
             ...option.params
         }
     }
+    
     try {
         const provider = new OpenStreetMapProvider(option);
         const results = await provider.search({

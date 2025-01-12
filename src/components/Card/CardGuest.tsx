@@ -1,22 +1,53 @@
 "use client"
 import InputCount from "@/components/Input/InputCount";
-import { bookingRoomSelector } from "@/hooks/selectors/roomSelector";
 import useDictionary from "@/hooks/useDictionary";
-import useRoomStore from "@/hooks/useRoomStore";
 import { cn } from "@/utils/dom.util";
-import { Spacer } from "@nextui-org/react";
-import React from "react"
+import { Divider, Spacer } from "@nextui-org/react";
+import React, { useCallback, useEffect, useState } from "react"
+import isEqual from "lodash.isequal";
 
+const initialValues = {
+    adults: 0,
+    children: 0,
+    infants: 0,
+    pets: 0,
+}
 interface CardGuestProps {
     className?: string;
+    isDivider?: boolean;
+    minGuest?: number;
+    maxGuest?: number;
+    values?: typeof initialValues;
+    onValueChange?: (values: typeof initialValues) => void;
 }
 
 const CardGuest: React.FC<CardGuestProps> = ({
-    className
+    className,
+    isDivider,
+    minGuest = 1,
+    maxGuest = 16,
+    values,
+    onValueChange
 }) => {
-    const { bookForm, setBookValue, maxGuest } = useRoomStore(bookingRoomSelector)
-
+    const [formData, setFormData] = useState(initialValues);
     const formMsg = useDictionary("common", d => d.forms.guests.options).d;
+
+    const setFormValue = useCallback(<T extends typeof formData, K extends keyof T>(key: K, value: T[K]) => {
+        const newValues = {
+            ...formData,
+            [key]: value,
+        }
+        setFormData(newValues);
+        if (onValueChange) {
+            onValueChange(newValues);
+        }
+    }, [formData, onValueChange]);
+
+    useEffect(() => {
+        if (values && !isEqual(values, formData)) {
+            setFormData(values);
+        }
+    },[values, formData]);
 
     return (
         <div className={cn(className)}>
@@ -30,13 +61,17 @@ const CardGuest: React.FC<CardGuestProps> = ({
                     </span>
                 </div>
                 <InputCount
-                    minValue={1}
-                    maxValue={maxGuest - bookForm.children}
-                    value={bookForm.adults}
-                    onValueChange={(v) => setBookValue("adults", v)}
+                    minValue={minGuest}
+                    maxValue={maxGuest - formData.children}
+                    value={formData.adults}
+                    onValueChange={(v) => setFormValue("adults", v)}
                 />
             </div>
             <Spacer y={3} />
+            {isDivider && (<>
+                <Divider />
+                <Spacer y={3} />
+            </>)}
             <div className="w-full flex justify-between">
                 <div>
                     <span className="block text-base">
@@ -47,12 +82,16 @@ const CardGuest: React.FC<CardGuestProps> = ({
                     </span>
                 </div>
                 <InputCount
-                    maxValue={maxGuest - bookForm.adults}
-                    value={bookForm.children}
-                    onValueChange={(v) => setBookValue("children", v)}
+                    maxValue={maxGuest - formData.adults}
+                    value={formData.children}
+                    onValueChange={(v) => setFormValue("children", v)}
                 />
             </div>
             <Spacer y={3} />
+            {isDivider && (<>
+                <Divider />
+                <Spacer y={3} />
+            </>)}
             <div className="w-full flex justify-between">
                 <div>
                     <span className="block text-base">
@@ -64,11 +103,15 @@ const CardGuest: React.FC<CardGuestProps> = ({
                 </div>
                 <InputCount
                     maxValue={5}
-                    value={bookForm.infants}
-                    onValueChange={(v) => setBookValue("infants", v)}
+                    value={formData.infants}
+                    onValueChange={(v) => setFormValue("infants", v)}
                 />
             </div>
             <Spacer y={3} />
+            {isDivider && (<>
+                <Divider />
+                <Spacer y={3} />
+            </>)}
             <div className="w-full flex justify-between">
                 <div>
                     <span className="block text-base">
@@ -79,9 +122,9 @@ const CardGuest: React.FC<CardGuestProps> = ({
                     </span>
                 </div>
                 <InputCount
-                    maxValue={1}
-                    value={bookForm.pets}
-                    onValueChange={(v) => setBookValue("pets", v)}
+                    maxValue={5}
+                    value={formData.pets}
+                    onValueChange={(v) => setFormValue("pets", v)}
                 />
             </div>
         </div>

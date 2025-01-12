@@ -73,6 +73,8 @@ const BookClient: React.FC<BookClientProps> = ({
 
     const handleSubmit = useCallback(async ({  }: { stripe: Stripe, elements: StripeElements }) => {
         setIsLoading(true);
+        console.log(bookForm);
+        
         if (!bookForm.dates) return;
 
         return toast.warning("Đang làm dở, sắp xong rùi :v")

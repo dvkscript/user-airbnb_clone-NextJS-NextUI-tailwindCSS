@@ -29,7 +29,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
 }) => {
     const router = useRouter();
     const roomId = useParams()?.roomId;
-    const { bookForm, setBookValue, maxGuest, searchParamKeys } = useRoomStore(bookingRoomSelector);
+    const { bookForm, setBookValue, maxGuest, searchParamKeys, setBookForm } = useRoomStore(bookingRoomSelector);
 
     const dateValue = useMemo(() => {
         if (!bookForm.dates) return null;
@@ -222,7 +222,16 @@ const BookingForm: React.FC<BookingFormProps> = ({
                             </button>
                         </PopoverTrigger>
                         <PopoverContent className="w-full px-4 py-5 flex-col gap-y-4">
-                            <CardGuest />
+                            <CardGuest
+                                values={bookForm}
+                                onValueChange={(values) => {
+                                    setBookForm({
+                                        ...values,
+                                        dates: bookForm.dates
+                                    })
+                                }}
+                                maxGuest={maxGuest}
+                            />
                             <p className="text-accent text-xs">
                                 {formMsg?.guests.maxGuest.replace("{{guest}}", `${maxGuest}`)}
                             </p>

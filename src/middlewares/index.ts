@@ -13,18 +13,26 @@ export default function middlewares() {
     return async function middleware(req: NextRequest) {
         const { pathname, href, origin } = req.nextUrl;
         const pathnames = pathname.split("/").filter((p) => p);
-            
         const locale = req.cookies.get(CookieConfig.locale.name)?.value ?? defaultLocale;
-        
+
         const localeRes = await localeValidate(req);
-        
+
         if (localeRes) return localeRes;
-        
+
         const authRes = await authMiddleware(req);
-        if (authRes) return authRes;
-        
+
+        if (!!authRes) {
+            authRes.cookies.set({
+                name: CookieConfig.locale.name,
+                value: pathnames[0],
+                httpOnly: CookieConfig.locale.httpOnly,
+                expires: CookieConfig.locale.expires,
+            })
+            return authRes;
+        }
+
         const notFoundRedirectRes = NextResponse.rewrite(new URL(`/${locale}/not-found`, req.url));
-        
+
         if (pathnames[1] === "become-a-host") {
             const roomId = pathnames[2];
             if (roomId && roomId !== "overview") {
@@ -60,7 +68,7 @@ export default function middlewares() {
 
         req.headers.set(HeaderConfig.nextUrl.name, JSON.stringify({
             pathname,
-            fullUrl: href, 
+            fullUrl: href,
             origin
         }))
 
@@ -70,6 +78,13 @@ export default function middlewares() {
             },
         });
 
+        response.cookies.set({
+            name: CookieConfig.locale.name,
+            value: pathnames[0],
+            httpOnly: CookieConfig.locale.httpOnly,
+            expires: CookieConfig.locale.expires,
+        })
+
         if (!pathname.startsWith(`/image`) && !pathname.startsWith(`/auth/`)) {
             response.cookies.set({
                 name: "locale",
@@ -78,7 +93,7 @@ export default function middlewares() {
                 expires: addDays(new Date(), 100),
             });
         }
-        
+
         return response;
     };
 }
